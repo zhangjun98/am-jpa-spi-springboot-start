@@ -260,7 +260,7 @@ public class ASqlHelper {
         prefixOverrides.add("or");
         //  对应条件中的 子sql
         if (aExample.oredCriteria.size() > 0) {
-            sql.append(" where ");
+            sql.append(" where  ");
         }
 
         StringBuilder whereSql = new StringBuilder(); //// and ( and  abc = 1 and bcd = 2 ) and  ( and  abc = 1 and bcd = 2 )
@@ -322,7 +322,12 @@ public class ASqlHelper {
             applyPrefix(whereSql, trimmedUppercaseSql, prefixOverrides, null);
 
         }
-        sql.append(whereSql);
+        if(!StringUtils.hasText(whereSql)){
+            sql.append(" 1 = 1 ");
+        }else{
+            sql.append(whereSql);
+        }
+
         returnpair = new Pair<>(sql.toString(), contidion);
         return returnpair;
     }
@@ -340,7 +345,7 @@ public class ASqlHelper {
         prefixOverrides.add("or");
         //  对应条件中的 子sql
         if (aExample.oredCriteria.size() > 0) {
-            sql.append(" where ");
+            sql.append(" where   ");
         }
 
         StringBuilder whereSql = new StringBuilder(); //// and ( and  abc = 1 and bcd = 2 ) and  ( and  abc = 1 and bcd = 2 )
@@ -402,7 +407,12 @@ public class ASqlHelper {
             applyPrefix(whereSql, trimmedUppercaseSql, prefixOverrides, null);
 
         }
-        sql.append(whereSql);
+        if(!StringUtils.hasText(whereSql)){
+            sql.append(" 1 = 1 ");
+        }else{
+            sql.append(whereSql);
+        }
+
         returnpair = new Pair<>(sql.toString(), contidion);
         return returnpair;
     }

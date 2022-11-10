@@ -502,7 +502,7 @@ public class AExample {
             for (String property : properties) {
                 //属性和列对应Map中有此属性
                 if (propertyMap.get(property) != null) {
-                    Object value = AReflectionUtil.getFieldValue(property, fieldMap.get(property));
+                    Object value = AReflectionUtil.getFieldValue(param, fieldMap.get(property));
                     //属性值不为空
                     if (value != null) {
                         andEqualTo(property, value);
@@ -658,7 +658,7 @@ public class AExample {
             for (String property : properties) {
                 //属性和列对应Map中有此属性
                 if (propertyMap.get(property) != null) {
-                    Object value = AReflectionUtil.getFieldValue(property, fieldMap.get(property));
+                    Object value = AReflectionUtil.getFieldValue(param, fieldMap.get(property));
                     //属性值不为空
                     if (value != null) {
                         orEqualTo(property, value);
@@ -679,7 +679,7 @@ public class AExample {
             for (String property : strings) {
                 //属性和列对应Map中有此属性
                 if (propertyMap.get(property) != null) {
-                    Object value = AReflectionUtil.getFieldValue(property, fieldMap.get(property));
+                    Object value = AReflectionUtil.getFieldValue(param, fieldMap.get(property));
                     //属性值不为空
                     if (value != null) {
                         orEqualTo(property, value);

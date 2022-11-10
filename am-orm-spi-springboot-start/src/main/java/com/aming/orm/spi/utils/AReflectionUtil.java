@@ -285,7 +285,8 @@ public abstract class AReflectionUtil {
         }
 
         allFields = getFieldsDirectly(beanClass, true);
-        return FIELDS_CACHE.put(beanClass, allFields);
+         FIELDS_CACHE.put(beanClass, allFields);
+        return FIELDS_CACHE.get(beanClass);
     }
 
     /**

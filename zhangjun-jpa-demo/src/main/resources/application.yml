@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: jpa-demo
+  datasource:
+    url:  jdbc:mysql://192.168.31.110:3306/land_test?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: ztemap
+    driver-class-name: com.mysql.jdbc.Driver
+#    validationQuery: select 'X'
+  jpa:
+    hibernate:
+      ddl-auto: update #配置自动建表：updata:没有表新建，有表更新操作,控制台显示建表语句
+    show-sql: true # 日志中显示sql
+    open-in-view: false
+server:
+  port: 8891
