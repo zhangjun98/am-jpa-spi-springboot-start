@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.aming.orm.spi.jpa.EntityManagerProvider,\
+com.aming.orm.spi.utils.ASpringUtils
